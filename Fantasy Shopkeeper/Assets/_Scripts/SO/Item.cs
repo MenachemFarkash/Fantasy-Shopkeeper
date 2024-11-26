@@ -8,6 +8,7 @@ public class Item : ScriptableObject {
     public bool isDefaultItem = false;
     public int buyPrice;
     public int sellPrice;
+    public GameObject model;
 
     public ItemType type;
 
