@@ -5,10 +5,10 @@ public class Item : ScriptableObject {
 
     new public string name = "New Item";
     public Sprite icon = null;
-    public bool isDefaultItem = false;
     public int buyPrice;
     public int sellPrice;
     public GameObject model;
+    public int amountInCrate;
 
     public ItemType type;
 
@@ -26,12 +26,7 @@ public class Item : ScriptableObject {
 }
 
 public enum ItemType {
-    Ore,
-    Equipment,
-    Log,
-    Bar,
-    RawFood,
-    Tinderbox
+    none,
 }
 
 

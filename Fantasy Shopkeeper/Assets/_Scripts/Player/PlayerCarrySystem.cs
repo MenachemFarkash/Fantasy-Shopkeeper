@@ -50,6 +50,7 @@ public class PlayerCarrySystem : MonoBehaviour {
                         CurrentHeldObject.transform.position = hit.point;
                         CurrentHeldObject.transform.rotation = Quaternion.identity;
                         CurrentHeldObject.transform.parent = null;
+                        CurrentHeldObject.AddComponent<Rigidbody>();
                         ResetToDefault();
                     }
                 }
@@ -60,6 +61,7 @@ public class PlayerCarrySystem : MonoBehaviour {
     public void AddItemToHand(GameObject newItem) {
         if (hand.childCount == 0) {
             isHoldingObject = true;
+            Destroy(newItem.GetComponent<Rigidbody>());
             newItem.transform.parent = hand;
             newItem.transform.position = hand.transform.position;
             newItem.transform.rotation = hand.transform.rotation;

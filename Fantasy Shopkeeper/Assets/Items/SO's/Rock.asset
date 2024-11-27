@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rock
   icon: {fileID: 0}
-  isDefaultItem: 0
   buyPrice: 0
   sellPrice: 0
   model: {fileID: 2649445592498661467, guid: db8dddb4ad299df40911d33f333b43ee, type: 3}
+  amountInCrate: 4
   type: 0

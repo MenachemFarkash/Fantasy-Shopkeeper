@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aca3d204c567fa468f2aa7cea1a7cb9, type: 3}
-  m_Name: Grass
+  m_Name: Gold
   m_EditorClassIdentifier: 
-  name: Grass
+  name: Gold
   icon: {fileID: 0}
   buyPrice: 0
   sellPrice: 0
-  model: {fileID: 2649445592498661467, guid: 333823da04b6f2843bdc4b2556912085, type: 3}
-  amountInCrate: 6
+  model: {fileID: 2649445592498661467, guid: 8495c177356ef7446b34a23766470553, type: 3}
+  amountInCrate: 5
   type: 0

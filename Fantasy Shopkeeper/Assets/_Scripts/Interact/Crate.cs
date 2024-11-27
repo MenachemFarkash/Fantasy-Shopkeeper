@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Crate : Interactable {
 
+    public Item crateItemSO;
+
     public bool canBePickedUp = true;
-    public Item crateItem;
     public int crateSize;
     public List<Item> itemsInCrate;
 
@@ -15,20 +16,26 @@ public class Crate : Interactable {
 
     public GameObject crateHologram;
 
-    private void Awake() {
-        itemsInCrate = new List<Item>(crateSize);
-    }
+
+
+
 
     private void Start() {
+        itemsInCrate = new List<Item>(crateItemSO.amountInCrate);
 
+        crateSize = crateItemSO.amountInCrate;
         for (int i = 0; i < crateSize; i++) {
-            itemsInCrate.Add(crateItem);
+            itemsInCrate.Add(crateItemSO);
         }
+
         foreach (Transform place in itemsPositionsContainer.GetComponentsInChildren<Transform>()) {
             if (place.childCount <= 0) {
                 itemsPositions.Add(place);
-                Instantiate(crateItem.model, place);
             }
+        }
+
+        for (int i = 0; i < crateSize; i++) {
+            Instantiate(crateItemSO.model, itemsPositions[i]);
         }
     }
 
