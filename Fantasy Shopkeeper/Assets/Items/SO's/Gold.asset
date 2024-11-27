@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gold
   icon: {fileID: 0}
-  buyPrice: 0
+  buyPrice: 5
   sellPrice: 0
-  model: {fileID: 2649445592498661467, guid: 8495c177356ef7446b34a23766470553, type: 3}
-  amountInCrate: 5
+  model: {fileID: 2649445592498661467, guid: 7143ada3634e7be4985ec6f97129bbc2, type: 3}
+  amountInCrate: 8
+  crate: {fileID: 5964510411927155259, guid: 248f8e2c551482543bc5bfd7ac36c2d7, type: 3}
   type: 0

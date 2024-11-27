@@ -70,6 +70,7 @@ public class PlayerCarrySystem : MonoBehaviour {
     }
 
     public void ResetToDefault() {
+
         CurrentHeldObject = null;
         isHoldingObject = false;
         Destroy(holdingObjectHologram);

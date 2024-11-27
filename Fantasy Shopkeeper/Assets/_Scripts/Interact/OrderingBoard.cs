@@ -15,7 +15,7 @@ public class OrderingBoard : Interactable {
     }
 
     public void Deliver(Item item) {
-        GameObject newCrate = Instantiate(CratePrefab, DeliverySpot);
+        GameObject newCrate = Instantiate(item.crate, DeliverySpot);
         newCrate.GetComponent<Crate>().crateItemSO = item;
     }
 

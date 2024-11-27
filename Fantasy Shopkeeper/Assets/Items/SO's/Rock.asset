@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rock
   icon: {fileID: 0}
-  buyPrice: 0
+  buyPrice: 3
   sellPrice: 0
-  model: {fileID: 2649445592498661467, guid: db8dddb4ad299df40911d33f333b43ee, type: 3}
-  amountInCrate: 4
+  model: {fileID: 2649445592498661467, guid: f487e2ec8b6a2a04eaf1355e3a0dcf73, type: 3}
+  amountInCrate: 16
+  crate: {fileID: 354369228836349907, guid: eb08192b5cb62a84eb97205276970a2c, type: 3}
   type: 0

@@ -9,6 +9,7 @@ public class Item : ScriptableObject {
     public int sellPrice;
     public GameObject model;
     public int amountInCrate;
+    public GameObject crate;
 
     public ItemType type;
 
