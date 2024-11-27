@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aca3d204c567fa468f2aa7cea1a7cb9, type: 3}
-  m_Name: Rock
+  m_Name: Grass
   m_EditorClassIdentifier: 
-  name: Rock
+  name: Grass
   icon: {fileID: 0}
-  isDefaultItem: 0
-  buyPrice: 0
+  buyPrice: 3
   sellPrice: 0
+  model: {fileID: 2649445592498661467, guid: 4c36dfc6b15a7f24e92bfb1dff9f489c, type: 3}
+  amountInCrate: 10
+  crate: {fileID: 3174536792440697633, guid: 47c0268328ae17f4697b01b1517c3c1d, type: 3}
   type: 0

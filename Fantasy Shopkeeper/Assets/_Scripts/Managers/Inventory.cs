@@ -28,19 +28,19 @@ public class Inventory : MonoBehaviour {
 
 
     public bool AddItem(Item item) {
-        if (!item.isDefaultItem) {
 
-            if (items.Count >= space) {
-                Debug.Log("Can't carry any more");
-                return false;
-            }
 
-            items.Add(item);
-
-            if (onItemChangedCallback != null) {
-                onItemChangedCallback.Invoke();
-            }
+        if (items.Count >= space) {
+            Debug.Log("Can't carry any more");
+            return false;
         }
+
+        items.Add(item);
+
+        if (onItemChangedCallback != null) {
+            onItemChangedCallback.Invoke();
+        }
+
         return true;
 
     }

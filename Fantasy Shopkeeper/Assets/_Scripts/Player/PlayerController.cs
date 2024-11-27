@@ -42,10 +42,10 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         #region Inputs
 
-        if (Input.GetKeyDown(KeyCode.I)) {
-            inventory.SetActive(!inventory.activeSelf);
-            canMove = !canMove;
-        }
+        //if (Input.GetKeyDown(KeyCode.I)) {
+        //    inventory.SetActive(!inventory.activeSelf);
+        //    canMove = !canMove;
+        //}
 
         #endregion
 
