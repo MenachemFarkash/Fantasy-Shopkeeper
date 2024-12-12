@@ -7,6 +7,8 @@ public class OrderingBoard : Interactable {
     public GameObject CratePrefab;
     public List<Item> Items;
 
+    public GoldManager GoldManager;
+
     public override void Interact() {
         base.Interact();
 
@@ -15,8 +17,11 @@ public class OrderingBoard : Interactable {
     }
 
     public void Deliver(Item item) {
-        GameObject newCrate = Instantiate(item.crate, DeliverySpot);
-        newCrate.GetComponent<Crate>().crateItemSO = item;
+        if (GoldManager.CheckIfCanAfford(5)) {
+            GameObject newCrate = Instantiate(item.crate, DeliverySpot);
+            newCrate.GetComponent<Crate>().crateItemSO = item;
+            GoldManager.RemoveGold(5);
+        }
     }
 
     public Item RollRandomItem() {

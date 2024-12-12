@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aca3d204c567fa468f2aa7cea1a7cb9, type: 3}
+  m_Name: Mashroom
+  m_EditorClassIdentifier: 
+  name: Mashroom
+  icon: {fileID: 0}
+  buyPrice: 9
+  sellPrice: 0
+  model: {fileID: 5354505554253156902, guid: b96ff3f718360764b8a6679b287cfa32, type: 3}
+  amountInCrate: 8
+  crate: {fileID: 5964510411927155259, guid: 248f8e2c551482543bc5bfd7ac36c2d7, type: 3}
+  type: 0
