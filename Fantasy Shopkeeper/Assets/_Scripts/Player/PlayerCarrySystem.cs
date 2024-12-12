@@ -8,6 +8,7 @@ public class PlayerCarrySystem : MonoBehaviour {
     public LayerMask groundLayerMask;
 
     public GameObject holdingObjectHologram;
+    public Vector3 holdingObjectHologramRotation = Vector3.zero;
     public bool isHologramActive = false;
 
     public bool isPlacingModeOn = false;
@@ -38,17 +39,20 @@ public class PlayerCarrySystem : MonoBehaviour {
                 }
 
                 if (Physics.Raycast(ray, out hit, 10f, groundLayerMask)) {
-                    print(hit.point);
                     holdingObjectHologram.transform.position = hit.point;
-                    holdingObjectHologram.transform.rotation = Quaternion.identity;
+                    holdingObjectHologram.transform.rotation = Quaternion.Euler(holdingObjectHologramRotation);
                 }
 
                 if (Physics.Raycast(ray, out hit, 5f, groundLayerMask)) {
 
+                    if (Input.GetKeyDown(KeyCode.R)) {
+                        holdingObjectHologramRotation += new Vector3(0, 90, 0);
+                    }
+
                     if (Input.GetKeyDown(KeyCode.E)) {
                         print("Placing item");
                         CurrentHeldObject.transform.position = hit.point;
-                        CurrentHeldObject.transform.rotation = Quaternion.identity;
+                        CurrentHeldObject.transform.rotation = Quaternion.Euler(holdingObjectHologramRotation);
                         CurrentHeldObject.transform.parent = null;
                         CurrentHeldObject.AddComponent<Rigidbody>();
                         ResetToDefault();

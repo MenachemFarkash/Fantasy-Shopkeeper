@@ -577,7 +577,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594197654171947131}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0, z: -0.297}
+  m_LocalPosition: {x: 0, y: 0, z: -0.362}
   m_LocalScale: {x: 0.6666667, y: 20, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -816,6 +816,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1773994649099902166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4665714453013869520}
+  m_Layer: 0
+  m_Name: AI Interact Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4665714453013869520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773994649099902166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4428326406048709111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2217353795509883763
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,14 +918,14 @@ MonoBehaviour:
   interactKey: 101
   itemPrefab: {fileID: 0}
   itemsPositions8:
-  - {x: -0.567, y: -0.15, z: -0.192}
-  - {x: -0.567, y: -0.15, z: -0.548}
-  - {x: -0.211, y: -0.15, z: -0.192}
-  - {x: -0.211, y: -0.15, z: -0.548}
-  - {x: 0.132, y: -0.15, z: -0.192}
-  - {x: 0.132, y: -0.15, z: -0.548}
-  - {x: 0.485, y: -0.15, z: -0.192}
-  - {x: 0.485, y: -0.15, z: -0.548}
+  - {x: -0.567, y: -0.3, z: -0.192}
+  - {x: -0.567, y: -0.3, z: -0.548}
+  - {x: -0.211, y: -0.3, z: -0.192}
+  - {x: -0.211, y: -0.3, z: -0.548}
+  - {x: 0.132, y: -0.3, z: -0.192}
+  - {x: 0.132, y: -0.3, z: -0.548}
+  - {x: 0.485, y: -0.3, z: -0.192}
+  - {x: 0.485, y: -0.3, z: -0.548}
   itemsPositions10:
   - {x: -0.57600003, y: -0.15, z: -0.19199999}
   - {x: -0.576, y: -0.15, z: -0.548}
@@ -923,9 +954,13 @@ MonoBehaviour:
   - {x: 0.121000014, y: -0.065, z: -0.5480001}
   - {x: 0.467, y: -0.065, z: -0.192}
   - {x: 0.46700007, y: -0.065, z: -0.5479999}
+  gameObjectsOnShelf: []
   itemQuantityText: {fileID: 4546531547280319602}
   itemPriceText: {fileID: 1125254102994970677}
+  itemQuantity: 0
+  itemPrice: 0
   carrySystem: {fileID: 0}
+  goldManager: {fileID: 0}
 --- !u!1 &2410803600714936592
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +987,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2410803600714936592}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0, z: -0.297}
+  m_LocalPosition: {x: 0, y: 0, z: -0.362}
   m_LocalScale: {x: 0.6666667, y: 20, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1111,9 +1146,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4428326406048709111}
+  - component: {fileID: 1139290341476911456}
+  - component: {fileID: 4164972215838189310}
   m_Layer: 0
   m_Name: Regular Shelf
-  m_TagString: Untagged
+  m_TagString: ShelfContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1133,8 +1170,49 @@ Transform:
   m_Children:
   - {fileID: 8309011876510627136}
   - {fileID: 9137171259351119033}
+  - {fileID: 4665714453013869520}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139290341476911456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756023464975085194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8cae10b7b0270479a3f3f157290bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shelves:
+  - {fileID: 8294202215508622877}
+  - {fileID: 6094271132864012619}
+  - {fileID: 6025744247114048719}
+  - {fileID: 4742993341327512216}
+  AIInteractPos: {fileID: 4665714453013869520}
+  BoxCollider: {fileID: 4164972215838189310}
+--- !u!65 &4164972215838189310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756023464975085194}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4808214, y: 0.2952952, z: 0.6900946}
+  m_Center: {x: -0.032433216, y: 0.1540433, z: -1.4752162}
 --- !u!1 &3552888368037278850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,14 +1568,14 @@ MonoBehaviour:
   interactKey: 101
   itemPrefab: {fileID: 0}
   itemsPositions8:
-  - {x: -0.567, y: -0.15, z: -0.192}
-  - {x: -0.567, y: -0.15, z: -0.548}
-  - {x: -0.211, y: -0.15, z: -0.192}
-  - {x: -0.211, y: -0.15, z: -0.548}
-  - {x: 0.132, y: -0.15, z: -0.192}
-  - {x: 0.132, y: -0.15, z: -0.548}
-  - {x: 0.485, y: -0.15, z: -0.192}
-  - {x: 0.485, y: -0.15, z: -0.548}
+  - {x: -0.567, y: -0.3, z: -0.192}
+  - {x: -0.567, y: -0.3, z: -0.548}
+  - {x: -0.211, y: -0.3, z: -0.192}
+  - {x: -0.211, y: -0.3, z: -0.548}
+  - {x: 0.132, y: -0.3, z: -0.192}
+  - {x: 0.132, y: -0.3, z: -0.548}
+  - {x: 0.485, y: -0.3, z: -0.192}
+  - {x: 0.485, y: -0.3, z: -0.548}
   itemsPositions10:
   - {x: -0.57600003, y: -0.15, z: -0.19199999}
   - {x: -0.576, y: -0.15, z: -0.548}
@@ -1526,9 +1604,13 @@ MonoBehaviour:
   - {x: 0.121000014, y: -0.065, z: -0.5480001}
   - {x: 0.467, y: -0.065, z: -0.192}
   - {x: 0.46700007, y: -0.065, z: -0.5479999}
+  gameObjectsOnShelf: []
   itemQuantityText: {fileID: 7340661628436850814}
   itemPriceText: {fileID: 2866517766779647430}
+  itemQuantity: 0
+  itemPrice: 0
   carrySystem: {fileID: 0}
+  goldManager: {fileID: 0}
 --- !u!1 &5470840085274510905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,14 +1682,14 @@ MonoBehaviour:
   interactKey: 101
   itemPrefab: {fileID: 0}
   itemsPositions8:
-  - {x: -0.567, y: -0.15, z: -0.192}
-  - {x: -0.567, y: -0.15, z: -0.548}
-  - {x: -0.211, y: -0.15, z: -0.192}
-  - {x: -0.211, y: -0.15, z: -0.548}
-  - {x: 0.132, y: -0.15, z: -0.192}
-  - {x: 0.132, y: -0.15, z: -0.548}
-  - {x: 0.485, y: -0.15, z: -0.192}
-  - {x: 0.485, y: -0.15, z: -0.548}
+  - {x: -0.567, y: -0.3, z: -0.192}
+  - {x: -0.567, y: -0.3, z: -0.548}
+  - {x: -0.211, y: -0.3, z: -0.192}
+  - {x: -0.211, y: -0.3, z: -0.548}
+  - {x: 0.132, y: -0.3, z: -0.192}
+  - {x: 0.132, y: -0.3, z: -0.548}
+  - {x: 0.485, y: -0.3, z: -0.192}
+  - {x: 0.485, y: -0.3, z: -0.548}
   itemsPositions10:
   - {x: -0.57600003, y: -0.15, z: -0.19199999}
   - {x: -0.576, y: -0.15, z: -0.548}
@@ -1636,9 +1718,13 @@ MonoBehaviour:
   - {x: 0.121000014, y: -0.065, z: -0.5480001}
   - {x: 0.467, y: -0.065, z: -0.192}
   - {x: 0.467, y: -0.065, z: -0.5479999}
+  gameObjectsOnShelf: []
   itemQuantityText: {fileID: 9033680335468483707}
   itemPriceText: {fileID: 2659955095707144507}
+  itemQuantity: 0
+  itemPrice: 0
   carrySystem: {fileID: 0}
+  goldManager: {fileID: 0}
 --- !u!1 &5647076078609569516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1840,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5669476111434118839}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0, z: -0.297}
+  m_LocalPosition: {x: 0, y: 0, z: -0.362}
   m_LocalScale: {x: 0.6666667, y: 20, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2151,14 +2237,14 @@ MonoBehaviour:
   interactKey: 101
   itemPrefab: {fileID: 0}
   itemsPositions8:
-  - {x: -0.567, y: -0.15, z: -0.192}
-  - {x: -0.567, y: -0.15, z: -0.548}
-  - {x: -0.211, y: -0.15, z: -0.192}
-  - {x: -0.211, y: -0.15, z: -0.548}
-  - {x: 0.132, y: -0.15, z: -0.192}
-  - {x: 0.132, y: -0.15, z: -0.548}
-  - {x: 0.485, y: -0.15, z: -0.192}
-  - {x: 0.485, y: -0.15, z: -0.548}
+  - {x: -0.567, y: -0.3, z: -0.192}
+  - {x: -0.567, y: -0.3, z: -0.548}
+  - {x: -0.211, y: -0.3, z: -0.192}
+  - {x: -0.211, y: -0.3, z: -0.548}
+  - {x: 0.132, y: -0.3, z: -0.192}
+  - {x: 0.132, y: -0.3, z: -0.548}
+  - {x: 0.485, y: -0.3, z: -0.192}
+  - {x: 0.485, y: -0.3, z: -0.548}
   itemsPositions10:
   - {x: -0.57600003, y: -0.15, z: -0.19199999}
   - {x: -0.576, y: -0.15, z: -0.548}
@@ -2187,9 +2273,13 @@ MonoBehaviour:
   - {x: 0.121000014, y: -0.065, z: -0.5480001}
   - {x: 0.467, y: -0.065, z: -0.192}
   - {x: 0.46700007, y: -0.065, z: -0.5479999}
+  gameObjectsOnShelf: []
   itemQuantityText: {fileID: 3685432229690753028}
   itemPriceText: {fileID: 3333815547992466829}
+  itemQuantity: 0
+  itemPrice: 0
   carrySystem: {fileID: 0}
+  goldManager: {fileID: 0}
 --- !u!1 &7388857780222045470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2482,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704557309470315646}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0, z: -0.297}
+  m_LocalPosition: {x: 0, y: 0, z: -0.362}
   m_LocalScale: {x: 0.6666667, y: 20, z: 1.3333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2400,7 +2490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.54999983, y: 0.02}
+  m_AnchoredPosition: {x: 0.55, y: 0.02}
   m_SizeDelta: {x: 1, y: 0.2254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1580764951160801917
