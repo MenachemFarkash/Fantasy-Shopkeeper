@@ -38,13 +38,13 @@ public class PlayerCarrySystem : MonoBehaviour {
                     isHologramActive = true;
                 }
 
-                if (Physics.Raycast(ray, out hit, 10f, groundLayerMask)) {
+                if (Physics.Raycast(ray, out hit, 10f, groundLayerMask, QueryTriggerInteraction.UseGlobal)) {
+
                     holdingObjectHologram.transform.position = hit.point;
                     holdingObjectHologram.transform.rotation = Quaternion.Euler(holdingObjectHologramRotation);
                 }
 
-                if (Physics.Raycast(ray, out hit, 5f, groundLayerMask)) {
-
+                if (Physics.Raycast(ray, out hit, 5f)) {
                     if (Input.GetKeyDown(KeyCode.R)) {
                         holdingObjectHologramRotation += new Vector3(0, 90, 0);
                     }
